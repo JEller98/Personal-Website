@@ -15,8 +15,7 @@ To add more work to the "Projects" section:
 *``img`` and everything below it can be omitted in favor of ``text`` for text-based links instead.
 
 # To-do:
-1) favicon
-2) Test out Tablet/Mobile view on real hardware
+1) Test out Tablet/Mobile view on real hardware
 
 # Future work:
 1) Isolate data into a separate JSON file, read into ``script.js``.
