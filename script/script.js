@@ -7,7 +7,7 @@ const projects = {
         links: [
             {
                 href: "#",
-                img: "../img/other/home.svg",
+                img: "img/other/home.svg",
                 alt: "An icon of a home.",
                 title: "You're already here!"
             }
