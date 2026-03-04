@@ -2,7 +2,7 @@
 const projects = {
     personal_website: {
         title: "Personal Website",
-        image: "../img/project_imgs/modal_imgs/website.jpg",
+        image: "img/project_imgs/modal_imgs/website.jpg",
         description: "The very website you're looking at! This project was created as a portfolio to showcase my experience and skills. I wanted to start off simple for this site, so I used HTML, CSS (Flexbox) and vanilla JavaScript. As time goes on I hope to add support for more accessibility features, but this is currently version 1. More to come!",
         links: [
             {
