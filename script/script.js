@@ -1,22 +1,18 @@
 //reading in modal data
 let projects = {};
 
-//fetch is an async operation; maybe ensure it runs before cardsa are loaded?
 fetch("data/data.json")
 .then(response => response.json()).then(data => {
     projects = data.projects;
+
+    //attempting to force card init only after json loads
+    initCards();
 })
 .catch(error => {
     console.error("JSON loading error: ", error);
 });
 
-const cards = document.querySelectorAll(".project-card");
 const modal = document.getElementById("project-modal");
-const modalTitle = document.getElementById("modal-title");
-const modalImage = document.getElementById("modal-img");
-const modalDescription = document.getElementById("modal-description");
-const modalLinksContainer = document.querySelector(".modal-links");
-const closeBtn = document.querySelector(".close-btn");
 
 //this function shows the modal window and locks window scrolling while the modal is open
 function openModal() {
@@ -33,49 +29,61 @@ function closeModal() {
 }
 
 //populate a given project with its respective data from JSON file
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        const key = card.dataset.project;
-        const data = projects[key];
+const modalTitle = document.getElementById("modal-title");
+const modalImage = document.getElementById("modal-img");
+const modalDescription = document.getElementById("modal-description");
+const modalLinksContainer = document.querySelector(".modal-links");
 
-        if (!data) {
-            return;
-        }
+function initCards() {
+    const cards = document.querySelectorAll(".project-card");
 
-        modalTitle.textContent = data.title;
-        modalImage.src = data.image;
-        modalDescription.textContent = data.description;
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const key = card.dataset.project;
+            const data = projects[key];
 
-        //clear lingering links
-        modalLinksContainer.innerHTML = "";
+            if (!data) {
+                return;
+            }
+
+            modalTitle.textContent = data.title;
+            modalImage.src = data.image;
+            modalDescription.textContent = data.description;
+
+            //clear lingering links
+            modalLinksContainer.innerHTML = "";
 
 
-        //build links
-        if (Array.isArray(data.links)) {
-            data.links.forEach(linkObj => {
-                const anchorLink = document.createElement("a");
-                anchorLink.href = linkObj.href || "#";
-                anchorLink.target = "_blank";
-                anchorLink.classList.add("modal-link");
+            //build links
+            if (Array.isArray(data.links)) {
+                data.links.forEach(linkObj => {
+                    const anchorLink = document.createElement("a");
+                    anchorLink.href = linkObj.href || "#";
+                    anchorLink.target = "_blank";
+                    anchorLink.classList.add("modal-link");
 
-                if (linkObj.img) {
-                    const img = document.createElement("img");
-                    img.src = linkObj.img;
-                    img.alt = linkObj.alt || "";
-                    img.title = linkObj.title || "";
-                    anchorLink.appendChild(img);
-                }
-                else if (linkObj.text) {
-                    anchorLink.textContent = linkObj.text;
-                }
+                    if (linkObj.img) {
+                        const img = document.createElement("img");
+                        img.src = linkObj.img;
+                        img.alt = linkObj.alt || "";
+                        img.title = linkObj.title || "";
+                        anchorLink.appendChild(img);
+                    }
+                    else if (linkObj.text) {
+                        anchorLink.textContent = linkObj.text;
+                    }
 
-                modalLinksContainer.appendChild(anchorLink);
-            });
-        }
-        
-        openModal();
+                    modalLinksContainer.appendChild(anchorLink);
+                });
+            }
+            
+            openModal();
+        });
     });
-});
+}
+
+//close button listeners for modal window
+const closeBtn = document.querySelector(".close-btn");
 
 closeBtn.addEventListener("click", () => {
     closeModal();
