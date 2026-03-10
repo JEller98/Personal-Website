@@ -1,6 +1,7 @@
 //reading in modal data
 let projects = {};
 
+//fetch is an async operation; maybe ensure it runs before cardsa are loaded?
 fetch("data/data.json")
 .then(response => response.json()).then(data => {
     projects = data.projects;
@@ -31,7 +32,7 @@ function closeModal() {
     document.body.style.overflow = "";
 }
 
-//populate a given project with its respective data from up above
+//populate a given project with its respective data from JSON file
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const key = card.dataset.project;
