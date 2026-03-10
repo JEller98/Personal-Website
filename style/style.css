@@ -496,7 +496,7 @@ footer img {
 @media (max-width: 767px) {
     /* re-size text */
     body {
-        font-size: 1.15rem;
+        font-size: 1rem;
         line-height: 1.7;
     }
 
