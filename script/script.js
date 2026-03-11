@@ -15,10 +15,16 @@ fetch("data/data.json")
 const modal = document.getElementById("project-modal");
 
 //this function shows the modal window and locks window scrolling while the modal is open
+let lastFocused;
+
 function openModal() {
+    lastFocused = document.activeElement;
+
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+
+    trapFocus();
 }
 
 //and vice versa
@@ -26,6 +32,10 @@ function closeModal() {
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+
+    if (lastFocused) {
+        lastFocused.focus();
+    }
 }
 
 //populate a given project with its respective data from JSON file
@@ -80,6 +90,35 @@ function initCards() {
             openModal();
         });
     });
+}
+
+//trap tab focus in modal window; focus is placed on project title by default
+function trapFocus () {
+    const focusArray = modal.querySelectorAll("a[href], button");
+
+    const first = focusArray[0];
+    const last = focusArray[focusArray.length - 1];
+
+    modal.addEventListener("keydown", e => {
+        if (e.key !== "Tab") {
+            return;
+        }
+
+        if (e.shiftKey) {
+            if (document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            }
+        }
+        else {
+            if (document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+    });
+
+    document.getElementById("modal-title").focus();
 }
 
 //close button listeners for modal window
