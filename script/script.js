@@ -12,9 +12,35 @@ fetch("data/data.json")
     console.error("JSON loading error: ", error);
 });
 
-const modal = document.getElementById("project-modal");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+            });
+
+            const activeLink = document.querySelector(`.nav-links a[href = "#${id}"]`);
+
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        }
+    });
+},
+{
+    threshold : 0.3,
+    rootMargin: "-80px 0px -40% 0px"
+});
+
+sections.forEach(section => observer.observe(section));
 
 //this function shows the modal window and locks window scrolling while the modal is open
+const modal = document.getElementById("project-modal");
 let lastFocused;
 
 function openModal() {
