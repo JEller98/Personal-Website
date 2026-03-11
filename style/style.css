@@ -59,6 +59,49 @@ button {
     color: inherit;
 }
 
+/* navigation header */
+header {
+    position: sticky;
+    top: 0;
+    background: #1f2937;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+.nav-header {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a:focus-visible {
+    outline: 3px solid #4c9ffe;
+    outline-offset: 4px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #1e3a8a;
+}
+
 /* nature image for hero + visibility fixes */
 #intro {
     position: relative;
@@ -173,6 +216,7 @@ section:not(#intro) {
     flex-wrap: wrap;
     padding: 16px 0 36px 0;
     position: relative;
+    list-style: none;
 }
 
 /* divider line between rows */
