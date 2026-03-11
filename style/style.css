@@ -63,7 +63,7 @@ button {
 header {
     position: sticky;
     top: 0;
-    background: #1f2937;
+    background: #f3f4f6;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
     z-index: 1000;
 }
@@ -72,6 +72,8 @@ header {
     max-width: 100%;
     margin: 0 auto;
     padding: 0.75rem 1rem;
+    font-family: 'Noto Sans', Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -85,21 +87,20 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    font-weight: 600;
-    color: #1e3a8a;
+    color: #1f2937;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.nav-links a:focus-visible {
-    outline: 3px solid #4c9ffe;
-    outline-offset: 4px;
+.nav-links a:hover, .nav-links a:focus-visible {
+    background-color: rgba(30, 58, 138, 0.1);
+    border-radius: 5px;
 }
 
 .nav-links a.active {
-    border-bottom: 2px solid #1e3a8a;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 /* nature image for hero + visibility fixes */
