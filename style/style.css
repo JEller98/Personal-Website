@@ -59,6 +59,31 @@ button {
     color: inherit;
 }
 
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+
+    transform: translateY(-120%);
+    opacity: 0;
+
+    background: #1e3a8a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: transform 0.35s ease-out, opacity 0.25s ease-out;
+    z-index: 1001;
+}
+
+.skip-link:focus {
+    transform: translateY(10%);
+    opacity: 1;
+}
+
 /* navigation header */
 header {
     position: sticky;
@@ -497,40 +522,6 @@ footer img {
         transform: none;
     }
 
-    /* hamburger menu */
-    .nav-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #f3f4f6;
-        padding: 1rem;
-
-        flex-direction: column;
-
-        transform: translateY(-10px);
-        opacity: 0;
-        pointer-events: none;
-
-        transition: transform 0.25s ease-out, opacity 0.2s ease-out;
-    }
-
-    .nav-links.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
-
     /* remove grayscale-to-color animation */
     #skills .tech-logos img {
         filter: none;
@@ -659,5 +650,46 @@ footer img {
 
     #skills .tech-logos img {
         width: 72px;
+    }
+}
+
+/*####################################
+######################################
+################ BOTH ################
+######################################
+####################################*/
+@media (max-width: 1200px) {
+    /* hamburger menu */
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #f3f4f6;
+        padding: 1rem;
+
+        flex-direction: column;
+
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.25s ease-out, opacity 0.2s ease-out;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 }
