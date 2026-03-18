@@ -74,15 +74,70 @@ header {
     padding: 0.75rem 1rem;
     font-family: 'Noto Sans', Helvetica, sans-serif;
     font-weight: 600;
+    position: sticky;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #1f2937;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #1f2937;
+    left: 0;
+    transition: all 0.25s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     gap: 2rem;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-links a {
@@ -90,6 +145,7 @@ header {
     color: #1f2937;
     padding: 0.5rem 1rem;
     transition: background 0.3s, color 0.3s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover, .nav-links a:focus-visible {
@@ -439,6 +495,40 @@ footer img {
     .project-card:hover img,
     #top-arrow:hover {
         transform: none;
+    }
+
+    /* hamburger menu */
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #f3f4f6;
+        padding: 1rem;
+
+        flex-direction: column;
+
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.25s ease-out, opacity 0.2s ease-out;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     /* remove grayscale-to-color animation */

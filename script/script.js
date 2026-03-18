@@ -12,7 +12,9 @@ fetch("data/data.json")
     console.error("JSON loading error: ", error);
 });
 
+//navbar
 const sections = document.querySelectorAll("section");
+const navContainer = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 const observer = new IntersectionObserver((entries) => {
@@ -38,6 +40,38 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => observer.observe(section));
+
+//hamburger menu for touchscreens
+const navToggle = document.querySelector(".nav-toggle");
+
+navToggle.addEventListener("click", () => {
+    navContainer.classList.toggle("open");
+    navToggle.classList.toggle("active");
+
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
+});
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navContainer.classList.remove("open");
+        navToggle.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+    });
+});
+
+document.addEventListener("click", e => {
+    //click won't climb up to document
+    e.stopPropagation();
+
+    const navClick = e.target.closest(".nav-header");
+
+    if (!navClick && navContainer.classList.contains("open")) {
+        navContainer.classList.remove("open");
+        navToggle.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+    }
+});
 
 //this function shows the modal window and locks window scrolling while the modal is open
 const modal = document.getElementById("project-modal");
@@ -160,7 +194,7 @@ modal.addEventListener("click", e => {
     }
 });
 
-window.addEventListener("keydown", (e) => {
+window.addEventListener("keydown", e => {
     if (e.key === "Escape" && modal.classList.contains("active")) {
         closeModal();
     }
