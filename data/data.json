@@ -3,7 +3,7 @@
         "website": {
             "title": "Personal Website",
             "image": "img/project_imgs/modal_imgs/website.jpg",
-            "description": "The very website you're looking at! This project was created as a portfolio to showcase my experience and skills. I wanted to start off simple for this site, so I used HTML, CSS (Flexbox) and vanilla JavaScript. As time goes on I hope to add support for more accessibility features, but this is currently version 1. More to come!",
+            "description": "The very website you're looking at! This project was created as a portfolio to showcase my experience and skills. I wanted to keep things simple for this site. Hope you like it!",
             "tools": [
                 {"img": "img/tech_logos/html.svg", "alt": "HTML"},
                 {"img": "img/tech_logos/css.svg", "alt": "CSS"},
@@ -19,6 +19,28 @@
             ]
         },
 
+        "grcnn": {
+            "title": "Green River College Nursing Nucleus",
+            "image": "img/project_imgs/modal_imgs/grcnn.jpg",
+            "description": "I partnered up with a few classmates during my junior year of college to make a tool that centralizes resources and documents for students in Green River's Nursing program. We completed it over the span of a quarter (or about 5 sprints), and learned a lot about making something for a non-technical audience and working as part of a team. The site got handed over to senior students to complete as their capstone project once our time working on it was done.",
+            "tools": [
+                {"img": "img/tech_logos/html.svg", "alt": "HTML"},
+                {"img": "img/tech_logos/css.svg", "alt": "CSS"},
+                {"img": "img/tech_logos/javascript.svg", "alt": "JavaScript"},
+                {"img": "img/tech_logos/php.svg", "alt": "PHP"}
+            ]
+        },
+
+        "library_project": {
+            "title": "Holman Library Data Dashboard",
+            "image": "img/project_imgs/modal_imgs/dashboard.jpg",
+            "description": "The capstone project for my Associate's Program, this project involved meeting with one of Green River's librarians and putting together a centralized source of data that pulled from an existing Google Site to visualize metrics about the substitute teaching program Green River's librarians serve as part of. I served as part of a team of people to clean data from an old Excel spreadsheet and hook this thing up. It's a lot more data-oriented compared to my software projects, and that's actually because my Associate's was in Data Analytics & Software Development, not pure software. We got the news a few months later that the librarian had actually integrated a lightly-modified version of this project into the librarians' toolset!",
+            "tools": [
+                {"img": "img/tech_logos/excel.svg", "alt": "Microsoft Excel"},
+                {"img": "img/tech_logos/powerbi.svg", "alt": "Microsoft Power BI"}
+            ]
+        },
+
         "hoverworks": {
             "title": "Hoverworks Ltd.",
             "image": "img/project_imgs/modal_imgs/website.jpg",
@@ -30,24 +52,6 @@
                 {"img": "img/tech_logos/docker.svg", "alt": "Docker"},
                 {"img": "img/tech_logos/gcp.svg", "alt": "Google Cloud Platform- Compute Engine"}
             ]
-        },
-
-        "grcnn": {
-            "title": "Green River College Nursing Nucleus",
-            "image": "img/project_imgs/modal_imgs/website.jpg",
-            "description": "I partnered up with a few classmates during my junior year of college to make a tool that centralizes resources and documents for students in Green River's Nursing program. We completed it over the span of a quarter, and learned a lot about making something for a non-technical audience and working as part of a team. It was a lot of fun!",
-            "tools": [
-                {"img": "img/tech_logos/html.svg", "alt": "HTML"},
-                {"img": "img/tech_logos/css.svg", "alt": "CSS"},
-                {"img": "img/tech_logos/javascript.svg", "alt": "JavaScript"},
-                {"img": "img/tech_logos/php.svg", "alt": "PHP"}
-            ]
-        },
-
-        "library_project": {
-            "title": "Holman Library Data Dashboard",
-            "image": "img/project_imgs/modal_imgs/website.jpg",
-            "description": "The capstone project for my Associate's Program, this project involved meeting with one of Green River's librarians and putting together a centralized source of data that pulled from an existing Google Site to visualize metrics about the substitute teaching program Green River's librarians serve as part of. I served as part of a team of people to clean data from an old Excel spreadsheet and hook this thing up. It's a lot more data-oriented compared to my software projects, and that's actually because my Associate's was in Data Analytics & Software Development, not pure software. We got the news a few months later that the librarian had actually integrated a lightly-modified version of this project into the librarians' toolset!"
         }
     }
 }
