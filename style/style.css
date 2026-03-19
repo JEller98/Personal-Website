@@ -287,7 +287,7 @@ section:not(#intro) {
 }
 
 /* container for tech logos */
-#skills .tech-logos {
+#tools .tech-logos {
     padding: 16px 0;
 }
 
@@ -314,14 +314,14 @@ section:not(#intro) {
 }
 
 /* colorize animation on hover */
-#skills .tech-logos img {
+#tools .tech-logos img {
     width: 50px;
     height: auto;
     filter: grayscale(100%) opacity(0.85);
     transition: filter 0.2s ease, transform 0.2s ease;
 }
 
-#skills .tech-logos img:hover {
+#tools .tech-logos img:hover {
     filter: grayscale(0%) opacity(1);
     transform: translateY(-5px);
 }
@@ -430,6 +430,35 @@ section:not(#intro) {
     border-radius: 8px;
 }
 
+.modal-tools {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.modal-tools h3 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #1e3a8a;
+}
+
+.modal-tools-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.modal-tools-row img {
+    width: 40px;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.modal-tools-row img:hover {
+    transform: translateY(-3px);
+}
+
 .modal-links {
     display: flex;
     gap: 16px;
@@ -515,7 +544,7 @@ footer img {
 @media (hover: none) {
     /* disable all hover effects */
     img:hover:not(#modal-img),
-    #skills .tech-logos img:hover,
+    #tools .tech-logos img:hover,
     .project-card:hover,
     .project-card:hover img,
     #top-arrow:hover {
@@ -523,7 +552,7 @@ footer img {
     }
 
     /* remove grayscale-to-color animation */
-    #skills .tech-logos img {
+    #tools .tech-logos img {
         filter: none;
         opacity: 1;
         transform: none;
@@ -576,7 +605,7 @@ footer img {
         max-height: 64px;
     }
 
-    #skills .tech-logos img {
+    #tools .tech-logos img {
         width: 64px;
     }
     
@@ -648,7 +677,7 @@ footer img {
         gap: 4px;
     }
 
-    #skills .tech-logos img {
+    #tools .tech-logos img {
         width: 72px;
     }
 }
