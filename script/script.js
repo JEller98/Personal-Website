@@ -119,6 +119,7 @@ function initCards() {
 
             modalTitle.textContent = data.title;
             modalImage.src = data.image;
+            modalImage.alt = data.alt || data.title || "Project Image";
             modalDescription.textContent = data.description;
 
             //clear lingering tools
