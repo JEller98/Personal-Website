@@ -707,7 +707,7 @@ footer img {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        right: 0;
         background: #f3f4f6;
         padding: 1rem;
 
