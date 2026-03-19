@@ -102,6 +102,7 @@ function closeModal() {
 const modalTitle = document.getElementById("modal-title");
 const modalImage = document.getElementById("modal-img");
 const modalDescription = document.getElementById("modal-description");
+const modalToolsContainer = document.querySelector(".modal-tools");
 const modalLinksContainer = document.querySelector(".modal-links");
 
 function initCards() {
@@ -120,9 +121,29 @@ function initCards() {
             modalImage.src = data.image;
             modalDescription.textContent = data.description;
 
+            //clear lingering tools
+            modalToolsContainer.innerHTML = "";
+            if (data.tools && data.tools.length) {
+                const toolsHeader = document.createElement("h3");
+                toolsHeader.textContent = "Tools Used";
+                modalToolsContainer.appendChild(toolsHeader);
+
+                const row = document.createElement("div");
+                row.classList.add("modal-tools-row");
+
+                data.tools.forEach(tool => {
+                    const img = document.createElement("img");
+                    img.src = tool.img;
+                    img.alt = tool.alt;
+                    img.title = tool.alt;
+                    row.appendChild(img);
+                });
+
+                modalToolsContainer.appendChild(row);
+            }
+
             //clear lingering links
             modalLinksContainer.innerHTML = "";
-
 
             //build links
             if (Array.isArray(data.links)) {
