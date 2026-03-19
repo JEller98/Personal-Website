@@ -327,7 +327,7 @@ section:not(#intro) {
 }
 
 /* i don't own the logos */
-#disclaimer {
+.disclaimer {
     text-align: center;
     font-size: 0.85rem;
     opacity: 0.85;
