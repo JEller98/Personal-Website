@@ -3,7 +3,13 @@
 2) Display 2 rows' worth of projects and hide the rest under a "View More..." interactable.
 3) Add a few college-era projects
 4) Update modal windows to include logos of tools used before the links section
-5) Add navigation header to allow easy access to different sections of the page
-6) Accessibility feature: skip links? May not be necessary if #5 exists...
+
+Order: 4, 3, 2
 
 *Mobile view could have smaller text
+
+Huy insights:
+Adjust links for the Experience section to your actual projects
+Don't have the GitHub hidden behind the icon; keep them somewhere on the navbar?
+Explain the work projects on the site too.
+If you're trying to get an interview you could send them the site; make it easy for them to find what they need
