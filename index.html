@@ -18,9 +18,9 @@
 </head>
 
 <body>
-    <a href = "#about" class = "skip-link">Skip to main content</a>
+    <a href = "#main" class = "skip-link">Skip to main content</a>
     <header>
-        <nav class = "nav-header">
+        <nav class = "nav-header" aria-label = "Main navigation">
             <button class = "nav-toggle" aria-label = "Toggle navigation" aria-expanded = "false">
                 <span class = "hamburger"></span>
             </button>
@@ -34,8 +34,8 @@
         </nav>
     </header>
 
-    <main>
-        <section id="intro">
+    <main id = "main">
+        <section id= "intro">
             <div class = "container">
                 <h1>Jared Eller</h1>
                 <h2>Fullstack Engineer</h2>
@@ -45,7 +45,7 @@
 
         <section id = "about">
             <div class = "container">
-                <h1>About Me</h1>
+                <h2>About Me</h2>
                 <!-- put an image of yourself here; find one that looks as professional as you can manage-->
                 <p>Hi there! I'm Jared, and I'm a full-stack web developer with a strong interest in building reliable, well-structured backend systems. I recently graduated Magna Cum Laude from <a href = "https://www.greenriver.edu/" target = "_blank" rel = "noopener noreferrer">Green River College</a> with a B.S. in <a href = "https://greenriver.edu/students/academics/areas-of-interest/bachelor-of-applied-science/bachelors-in-software-development/index.html" target = "_blank" rel = "noopener noreferrer">Applied Computer Science</a>, where I focused on developing practical web applications and strengthening my foundations in systems thinking.</p>
             
@@ -57,7 +57,7 @@
 
         <section id = "experience">
             <div class = "container">
-                <h1>Experience</h1>
+                <h2>Experience</h2>
                 <div class = "job">
                     <div class = "job-logo">
                         <img src = "img/job_logos/codeday-notext-black.png" alt = "CodeDay Logo" title = "CodeDay">
@@ -119,7 +119,7 @@
 
         <section id = "tools">
             <div class = "container">
-                <h1> Tools & Languages </h1>
+                <h2> Tools & Languages </h2>
                 <p>During my year of development experience, I've worked with a few different tools. Here are some of my favorites:</p>
                 <div class="tech-logos">
                     <ul class = "logo-row">
@@ -153,7 +153,7 @@
 
         <section id = "cards">
             <div class = "container">
-                <h1>Projects</h1>
+                <h2>Projects</h2>
 
                 <div class = "project-grid">
                     <button class = "project-card" data-project = "website" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
@@ -163,14 +163,14 @@
                         </div>
                     </button>
 
-                    <button class = "project-card" data-project = "grcnn" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
+                    <button class = "project-card" data-project = "grcnn" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Green River Nursing Nucleus project details">
                         <img src = "img/project_imgs/card_imgs/grcnp.jpg" alt = "An image of a nursing website.">
                         <div class = "project-overlay">
                             <h3>Green River College Nursing Nucleus</h3>
                         </div>
                     </button>
 
-                    <button class = "project-card" data-project = "library_project" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
+                    <button class = "project-card" data-project = "library_project" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Holman Library Project details">
                         <img src = "img/project_imgs/card_imgs/data.jpg" alt = "An image of a graph of data.">
                         <div class = "project-overlay">
                             <h3>Holman Library Project</h3>
@@ -185,7 +185,7 @@
             <div class = "modal-content">
                 <button class = "close-btn" aria-label = "Close project details">&times;</button>
                 <img id = "modal-img" src = "" alt = "" title = "">
-                <h2 id = "modal-title" tabindex = "-1"></h2>
+                <h2 id = "modal-title" tabindex = "-1">Project Details</h2>
                 <p id = "modal-description"></p>
                 <div class = "modal-tools"></div>
                 <p class = "disclaimer">All product names, logos and brands are property of their respective owners.</p>
@@ -196,10 +196,10 @@
     <footer>
         <div class = "container" id = "links">
             <nav aria-label= "Social links">
-                <a href = "https://github.com/JEller98" target = "_blank" rel = "noopener noreferrer">
+                <a href = "https://github.com/JEller98" target = "_blank" rel = "noopener noreferrer" aria-label = "Visit my GitHub page">
                     <img src = "img/other/GitHub_Invertocat_Black.png" alt = "GitHub Logo" title = "GitHub">
                 </a>
-                <a href = "https://linkedin.com/in/jeller98" target = "_blank" rel = "noopener noreferrer">
+                <a href = "https://linkedin.com/in/jeller98" target = "_blank" rel = "noopener noreferrer" aria-label = "Visit my LinkedIn page">
                     <img src = "img/other/InBug-Black.png" alt = "LinkedIn Logo" title = "LinkedIn">
                 </a>
                 <p>© Jared Eller 2026</p>
