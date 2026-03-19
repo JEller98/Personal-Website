@@ -27,7 +27,7 @@
             <ul class = "nav-links">
                 <li><a href = "#about">About</a></li>
                 <li><a href = "#experience">Experience</a></li>
-                <li><a href = "#skills">Tools & Languages</a></li>
+                <li><a href = "#tools">Tools & Languages</a></li>
                 <li><a href = "#cards">Projects</a></li>
                 <li><a href = "#links">Links</a></li>
             </ul>
@@ -117,7 +117,7 @@
             </div>
         </section>
 
-        <section id = "skills">
+        <section id = "tools">
             <div class = "container">
                 <h1> Tools & Languages </h1>
                 <p>During my year of development experience, I've worked with a few different tools. Here are some of my favorites:</p>
@@ -156,13 +156,26 @@
                 <h1>Projects</h1>
 
                 <div class = "project-grid">
-                    <button class = "project-card" data-project = "personal_website" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
+                    <button class = "project-card" data-project = "website" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
                         <img src = "img/other/walkway.jpg" alt = "A photograph of a walkway angled upwards.">
                         <div class = "project-overlay">
                             <h3>Personal Website</h3>
                         </div>
                     </button>
 
+                    <button class = "project-card" data-project = "grcnn" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
+                        <img src = "img/project_imgs/card_imgs/grcnp.jpg" alt = "An image of a nursing website.">
+                        <div class = "project-overlay">
+                            <h3>Green River College Nursing Nucleus</h3>
+                        </div>
+                    </button>
+
+                    <button class = "project-card" data-project = "library_project" aria-haspopup = "dialog" aria-controls = "project-modal" aria-label = "Open Personal Website project details">
+                        <img src = "img/project_imgs/card_imgs/data.jpg" alt = "An image of a graph of data.">
+                        <div class = "project-overlay">
+                            <h3>Holman Library Project</h3>
+                        </div>
+                    </button>
                 </div>
             </div>
         </section>
@@ -174,6 +187,7 @@
                 <img id = "modal-img" src = "" alt = "" title = "">
                 <h2 id = "modal-title" tabindex = "-1"></h2>
                 <p id = "modal-description"></p>
+                <div class = "modal-tools"></div>
                 <div class = "modal-links"></div>
             </div>
     </div>   
