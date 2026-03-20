@@ -7,7 +7,8 @@
             "tools": [
                 {"img": "img/tech_logos/html.svg", "alt": "HTML"},
                 {"img": "img/tech_logos/css.svg", "alt": "CSS"},
-                {"img": "img/tech_logos/javascript.svg", "alt": "JavaScript"}
+                {"img": "img/tech_logos/javascript.svg", "alt": "JavaScript"},
+                {"img": "img/tech_logos/git.svg", "alt": "Git"}
             ],
             "links": [
                 {
