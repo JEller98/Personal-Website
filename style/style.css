@@ -393,6 +393,21 @@ section:not(#intro) {
     opacity: 1;
 }
 
+/* "View More"/"View Less" button */
+.hidden-project {
+    display: none;
+}
+
+.more-btn {
+    margin: 24px auto 0;
+    display: block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    background: #1e3a8a;
+    color: white;
+    cursor: pointer;
+}
+
 /* background dimming + modal window toggle */
 .modal {
     display: none;

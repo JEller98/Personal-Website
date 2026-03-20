@@ -7,6 +7,7 @@ fetch("data/data.json")
 
     //attempting to force card init only after json loads
     initCards();
+    updateProjectVisibility();
 })
 .catch(error => {
     console.error("JSON loading error: ", error);
@@ -71,6 +72,79 @@ document.addEventListener("click", e => {
         navToggle.classList.remove("active");
         navToggle.setAttribute("aria-expanded", "false");
     }
+});
+
+//"View More"/"View Less" buttons for project card grid
+const moreBtn = document.getElementById("more-btn");
+
+let expanded = false;
+
+function cardRows(cards) {
+    const rows = [];
+    let currentRow = [];
+    let lastTop = null;
+
+    cards.forEach(card => {
+        const top = card.offsetTop;
+
+        if (lastTop === null || Math.abs(top - lastTop) < 5) {
+            currentRow.push(card);
+        }
+        else {
+            rows.push(currentRow);
+            currentRow = [card];
+        }
+
+        lastTop = top;
+    });
+
+    if (currentRow.length) {
+        rows.push(currentRow);
+    }
+
+    return rows;
+}
+
+function updateProjectVisibility() {
+    requestAnimationFrame(() => {
+        const projectCards = document.querySelectorAll(".project-card");
+
+        //transform the NodeList to an array
+        const rows = cardRows([...projectCards]);
+
+        rows.forEach((row, index) => {
+            row.forEach(card => {
+                if (!expanded && index >= 2) {
+                    card.classList.add("hidden-project");
+                } else {
+                    card.classList.remove("hidden-project");
+                }
+            });
+        });
+
+        if (rows.length <= 2) {
+            moreBtn.style.display = "none";
+        } else {
+            moreBtn.style.display = "block";
+        }
+    });
+}
+
+moreBtn.addEventListener("click", () => {
+    expanded = !expanded;
+
+    moreBtn.textContent = expanded ? "View Less" : "View More";
+    moreBtn.setAttribute("aria-expanded", expanded);
+
+    updateProjectVisibility();
+});
+
+window.addEventListener("resize", () => {
+    updateProjectVisibility();
+});
+
+window.addEventListener("load", () => {
+    updateProjectVisibility();
 });
 
 //this function shows the modal window and locks window scrolling while the modal is open
