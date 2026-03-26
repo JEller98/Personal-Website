@@ -62,9 +62,6 @@ navLinks.forEach(link => {
 });
 
 document.addEventListener("click", e => {
-    //click won't climb up to document
-    e.stopPropagation();
-
     const navClick = e.target.closest(".nav-header");
 
     if (!navClick && navContainer.classList.contains("open")) {
@@ -73,6 +70,41 @@ document.addEventListener("click", e => {
         navToggle.setAttribute("aria-expanded", "false");
     }
 });
+
+//light/dark mode
+const toggle = document.getElementById("theme-toggle");
+const icon = document.getElementById("theme-icon");
+const root = document.documentElement;
+
+function updateIcon() {
+    if (root.classList.contains("dark-mode")) {
+        icon.src = "img/other/sun.svg";
+        icon.alt = "A sun icon";
+    }
+    else {
+        icon.src = "img/other/moon.svg";
+        icon.alt = "A moon icon";
+    }
+}
+
+if (localStorage.getItem("theme") === "dark") {
+    root.classList.add("dark-mode");
+}
+
+toggle.addEventListener("click", () => {
+    root.classList.toggle("dark-mode");
+
+    if(root.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        localStorage.setItem("theme", "light");
+    }
+
+    updateIcon();
+});
+
+updateIcon();
 
 //"View More"/"View Less" buttons for project card grid
 const moreBtn = document.getElementById("more-btn");
@@ -233,6 +265,7 @@ function initCards() {
                         img.src = linkObj.img;
                         img.alt = linkObj.alt || "";
                         img.title = linkObj.title || "";
+                        img.classList.add(linkObj.class || "");
                         anchorLink.appendChild(img);
                     }
                     else if (linkObj.text) {
