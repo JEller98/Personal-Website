@@ -103,7 +103,7 @@ button {
 
 .skip-link {
     position: absolute;
-    top: 60px;
+    top: 65px;
     left: 1rem;
 
     transform: translateY(-120%);
@@ -119,11 +119,14 @@ button {
 
     transition: transform 0.35s ease-out, opacity 0.25s ease-out;
     z-index: 1001;
+
+    pointer-events: none;
 }
 
 .skip-link:focus {
     transform: translateY(10%);
     opacity: 1;
+    pointer-events: auto;
 }
 
 body, header, .modal-content, .project-card {
