@@ -1,0 +1,95 @@
+/* experience section */
+.job {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+/* making the logos play nice */
+.job-logo {
+    width: 110px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-logo img {
+    max-width: 100%;
+    max-height: 48px;
+    height: auto;
+}
+
+/* work dates on same line as employer name */
+.job-info {
+    flex: 1;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job-date {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.job-info p {
+    margin: 4px 0;
+}
+
+/* grc logo min 97 px, per their site */
+.job img[src*="GRC_Logo"] {
+    min-width: 100px;
+    width: auto;
+}
+
+/* container for tech logos */
+#tools .tech-logos {
+    padding: 16px 0;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 16px 0 36px 0;
+    position: relative;
+    list-style: none;
+}
+
+/* divider line between rows */
+.logo-row:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 1px;
+    background: var(--border);
+}
+
+/* colorize animation on hover */
+#tools .tech-logos img {
+    width: 50px;
+    height: auto;
+    filter: grayscale(100%) opacity(0.85);
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+#tools .tech-logos img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: translateY(-5px);
+}
+
+/* i don't own the logos */
+.disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
