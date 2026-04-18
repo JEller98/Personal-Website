@@ -1,5 +1,6 @@
 {
     "projects": {
+
         "website": {
             "title": "Personal Website",
             "image": "img/project_imgs/modal_imgs/website.jpg",
@@ -53,6 +54,27 @@
                 {"img": "img/tech_logos/git.svg", "alt": "Git"},
                 {"img": "img/tech_logos/docker.svg", "alt": "Docker"},
                 {"img": "img/tech_logos/gcp.svg", "alt": "Google Cloud Platform- Compute Engine"}
+            ]
+        },
+        "photo_site": {
+            "title": "kassandraeller.com",
+            "image": "",
+            "description": "I was speaking with my sister once upon a time, and somehow the topic came to money and expenses. I learned that she'd been paying over $200 per year for a site that was 4 years out of date and unfinished (her words, not mine)! I decided to strike a deal with her: I'd go stay in the spare room of her townhouse for some time, and in exchange she'd get a new website that's a better value for her money. I took a few days off my weekend job to give myself plenty of time to complete this, and after about a week of work, the site was done. It felt good to save her some money; when the project was all wrapped up, Kasasndra told me the new site costs her about $XYZ per year.",
+            "tools": [
+                {"img": "img/tech_logos/react.svg", "alt": "React.js"},
+                {"img": "img/tech_logos/react-router.svg", "alt": "React Router"},
+                {"img": "img/tech_logos/css.svg", "alt": "CSS"},
+                {"img": "img/tech_logos/vite.svg", "alt": "Vite"},
+                {"img": "img/tech_logos/git.svg", "alt": "Git"}
+            ],
+            "links": [
+                {
+                    "href": "https://lambent-sfogliatella-a6c90c.netlify.app/",
+                    "img": "",
+                    "alt": "",
+                    "title": "Take a look!",
+                    "class": "invertible"
+                }
             ]
         }
     }
