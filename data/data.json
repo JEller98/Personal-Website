@@ -46,14 +46,15 @@
 
         "hoverworks": {
             "title": "Hoverworks Ltd.",
-            "image": "img/project_imgs/modal_imgs/website.jpg",
-            "description": "This was a project I built for my Cloud Application Deployment class during my time at Green River; it's meant to mock a storefront where users could purchase hoverboards (less like the ones with wheels that exist in the real world, more like \"skateboard-shaped board that shoots pressurized air out the bottom to maintain a floating state\". It was created as a SPA that enables CRUD operations with a containerized MySQL database, and was made with React.js on the front-end, Node.js on the back-end, could be deployed as a Docker image, and was hosted on an IaaS instance via Google Cloud Platform's Compute Engine.",
+            "image": "",
+            "description": "This was a project I built for my Cloud Application Deployment class during my time at Green River; it's meant to mock a storefront where users could purchase hoverboards (less like the ones with wheels that exist in the real world, more like \"skateboard-shaped board that shoots pressurized air out the bottom to actually hover\". It was created as a SPA that enables CRUD operations with a containerized MySQL database, and was made with React.js on the front-end, Express.js on the back-end, could be deployed as a Docker image, and was hosted on an IaaS instance via Google Cloud Platform's Compute Engine. A few years after graduating, I decided to go back and whip up some models in Blender to give it a fresh coat of paint. Click the link below to check it out!",
             "tools": [
                 {"img": "img/tech_logos/react.svg", "alt": "React.js"},
-                {"img": "img/tech_logos/node.svg", "alt": "Node.js"},
+                {"img": "img/tech_logos/express.svg", "alt": "Express.js"},
                 {"img": "img/tech_logos/git.svg", "alt": "Git"},
                 {"img": "img/tech_logos/docker.svg", "alt": "Docker"},
-                {"img": "img/tech_logos/gcp.svg", "alt": "Google Cloud Platform- Compute Engine"}
+                {"img": "img/tech_logos/gcp.svg", "alt": "Google Cloud Platform- Compute Engine"},
+                {"img": "img/tech_logos/blender.svg", "alt": "Blender"}
             ]
         },
         "photo_site": {
