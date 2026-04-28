@@ -1,12 +1,80 @@
-/*####################################
-######################################
-########### TABLET STYLING ###########
-######################################
-####################################*/
-@media (max-width: 1200px) and (min-width: 768px) {
+/* touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    /* remove grayscale-to-color animation */
+    #tools .tech-logos img {
+        filter: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    /* touch-friendly card overlay */
+    .project-overlay {
+        inset: auto 0 0 0;
+        height: auto;
+        opacity: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 12px 10px;
+
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 1;
+    }
+
+    .project-overlay h3 {
+        font-size: 1.1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .close-btn {
+        display: none;
+    }
+}
+
+/* hamburger menu for smaller screens (or touchscreens) */
+@media (max-width: 1200px), (hover: none) and (pointer: coarse){
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        padding: 1rem;
+
+        flex-direction: column;
+
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.25s ease-out, opacity 0.2s ease-out;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }    
+}
+
+/* smaller screen styling */
+@media (max-width: 1368px) {
     /* re-size text */
     body {
-        font-size: 1.15rem;
+        line-height: 1.7;
     }
     
     /* re-size employer logos */
@@ -56,17 +124,8 @@
     }
 }
 
-/*####################################
-######################################
-########### MOBILE STYLING ###########
-######################################
-####################################*/
+/* for phones in portrait view */
 @media (max-width: 767px) {
-    /* re-size text */
-    body {
-        line-height: 1.7;
-    }
-
     /* re-size employer logos */
     .job {
         flex-direction: column;
@@ -88,97 +147,5 @@
         flex-direction: column;
         align-items: center;
         gap: 4px;
-    }
-
-    #tools .tech-logos img {
-        width: 72px;
-    }
-}
-
-/*####################################
-######################################
-################ BOTH ################
-######################################
-####################################*/
-@media (max-width: 1200px) {
-    /* disable all hover effects */
-    img:hover:not(#modal-img),
-    #tools .tech-logos img:hover,
-    .project-card:hover,
-    .project-card:hover img,
-    #top-arrow:hover {
-        transform: none;
-    }
-    
-    /* disable skip link- not sure it needs to be here*/
-    .skip-link {
-        display: none;
-    }
-
-    /* hamburger menu */
-    .nav-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--nav-bg);
-        padding: 1rem;
-
-        flex-direction: column;
-
-        transform: translateY(-10px);
-        opacity: 0;
-        pointer-events: none;
-
-        transition: transform 0.25s ease-out, opacity 0.2s ease-out;
-    }
-
-    .nav-links.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    /* remove grayscale-to-color animation */
-    #tools .tech-logos img {
-        filter: none;
-        opacity: 1;
-        transform: none;
-    }
-
-    /* touch-friendly card overlay */
-    .project-overlay {
-        inset: auto 0 0 0;
-        height: auto;
-        opacity: 1;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 12px 10px;
-
-        background: rgba(0, 0, 0, 0.75);
-        z-index: 1;
-    }
-
-    .project-overlay h3 {
-        font-size: 1.1rem;
-        margin: 0;
-        text-align: center;
-    }
-
-    .close-btn {
-        display: none;
     }
 }
