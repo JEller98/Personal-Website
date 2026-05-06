@@ -74,19 +74,6 @@
     background: var(--border);
 }
 
-/* colorize animation on hover */
-#tools .tech-logos img {
-    width: 50px;
-    height: auto;
-    filter: grayscale(100%) opacity(0.85);
-    transition: filter 0.2s ease, transform 0.2s ease;
-}
-
-#tools .tech-logos img:hover {
-    filter: grayscale(0%) opacity(1);
-    transform: translateY(-5px);
-}
-
 /* i don't own the logos */
 .disclaimer {
     text-align: center;
