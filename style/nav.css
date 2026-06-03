@@ -1,0 +1,130 @@
+/* navigation header */
+header {
+    position: sticky;
+    top: 0;
+    background: var(--nav-bg);
+    box-shadow: 0 1px 4px var(--shadow-strong);
+    z-index: 1000;
+}
+
+.nav-header {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    font-family: 'Noto Sans', Helvetica, sans-serif;
+    font-weight: 600;
+    position: sticky;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    left: 0;
+    transition: all 0.25s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover, .nav-links a:focus-visible {
+    background-color: color-mix(in srgb, var(--accent) 15%, transparent);
+    border-radius: 5px;
+}
+
+.nav-links a.active {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* light/dark mode */
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#theme-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode #theme-icon{
+    transform: rotate(180deg);
+}
