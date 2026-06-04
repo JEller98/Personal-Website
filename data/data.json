@@ -1,5 +1,26 @@
 {
     "projects": {
+        "habitflow": {
+            "title": "Habitflow",
+            "image": "img/project_imgs/modal_imgs/habitflow.jpg",
+            "description": "So, I'd been trying to track some personal improvement metrics; things like \"Did I study Japanese today\", \"Did I practice Neetcode problems\", \"Did I remember to do my morning stretches\", things like that. I was tracking the metrics just fine, but didn't really have a visualization of the data, just a raw text file for a given day. I decided to build this while I was out at CascadiaJS 2026 to help me better visualize my progress, and the difference in motivation is night and day. Included is a heatmap, various charts, default data (as shown in the screenshot), importing of custom JSON files and exporting of the current data file, and daily reports/habit creation from within the app itself. Soon I plan to spin up a mobile version and a backend so I can track my progress from anywhere instead of just from home!",
+            "tools": [
+                {"img": "img/tech_logos/html.svg", "alt": "HTML"},
+                {"img": "img/tech_logos/css.svg", "alt": "CSS"},
+                {"img": "img/tech_logos/javascript.svg", "alt": "JavaScript"},
+                {"img": "img/tech_logos/git.svg", "alt": "Git"}
+            ],
+            "links": [
+                {
+                    "href": "https://github.com/JEller98/habit-tracker",
+                    "img": "img/other/GitHub_Invertocat_Black.png",
+                    "alt": "GitHub logo.",
+                    "title": "Check out the Git repository!",
+                    "class": "invertible"
+                }
+            ]
+        },
+
 
         "website": {
             "title": "Personal Website",
