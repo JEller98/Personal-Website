@@ -3,7 +3,7 @@
         "habitflow": {
             "title": "Habitflow",
             "image": "img/project_imgs/modal_imgs/habitflow.jpg",
-            "description": "So, I'd been trying to track some personal improvement metrics; things like \"Did I study Japanese today\", \"Did I practice Neetcode problems\", \"Did I remember to do my morning stretches\", things like that. I was tracking the metrics just fine, but didn't really have a visualization of the data, just a raw text file for a given day. I decided to build this while I was out at CascadiaJS 2026 to help me better visualize my progress, and the difference in motivation is night and day. Included is a heatmap, various charts, default data (as shown in the screenshot), importing of custom JSON files and exporting of the current data file, and daily reports/habit creation from within the app itself. Soon I plan to spin up a mobile version and a backend so I can track my progress from anywhere instead of just from home!",
+            "description": "So, I'd been trying to track some personal improvement metrics; things like \"Did I study Japanese today\", \"Did I practice Neetcode problems\", \"Did I remember to do my morning stretches\", things like that. I was tracking the metrics just fine, but didn't really have a visualization of the data, just a raw text file for a given day. I decided to build this while I was out at CascadiaJS 2026 to help me better visualize my progress, and the difference in motivation is night and day. Included is a heatmap, various charts, default data (as shown in the screenshot), importing of custom JSON files and exporting of the current data file, and daily reports/habit creation from within the app itself. Like most of my recent projects, I opted for a JSON file to serve as the data layer. Soon I plan to spin up a mobile version and a backend so I can track my progress from anywhere instead of just from home!",
             "tools": [
                 {"img": "img/tech_logos/html.svg", "alt": "HTML"},
                 {"img": "img/tech_logos/css.svg", "alt": "CSS"},
@@ -25,7 +25,7 @@
         "website": {
             "title": "Personal Website",
             "image": "img/project_imgs/modal_imgs/website.jpg",
-            "description": "The very website you're looking at! This project was created as a portfolio to showcase my experience and skills. I wanted to keep things simple for this site. Hope you like it!",
+            "description": "The very website you're looking at! This project was created as a portfolio to showcase my experience and skills. I wanted to keep things simple for this site, so all data reading is done via JSON file. Hope you like it!",
             "tools": [
                 {"img": "img/tech_logos/html.svg", "alt": "HTML"},
                 {"img": "img/tech_logos/css.svg", "alt": "CSS"},
@@ -72,6 +72,7 @@
             "tools": [
                 {"img": "img/tech_logos/react.svg", "alt": "React.js"},
                 {"img": "img/tech_logos/express.svg", "alt": "Express.js"},
+                {"img": "img/tech_logos/sql.svg", "alt": "PostGreSQL"},
                 {"img": "img/tech_logos/git.svg", "alt": "Git"},
                 {"img": "img/tech_logos/docker.svg", "alt": "Docker"},
                 {"img": "img/tech_logos/gcp.svg", "alt": "Google Cloud Platform- Compute Engine"},
@@ -81,7 +82,7 @@
         "photo_site": {
             "title": "kassandraeller.com",
             "image": "",
-            "description": "I was speaking with my sister once upon a time, and somehow the topic came to money and expenses. I learned that she'd been paying over $200 per year for a site that was 4 years out of date and unfinished (her words, not mine)! I decided to strike a deal with her: I'd go stay in the spare room of her townhouse for some time, and in exchange she'd get a new website that's a better value for her money. I took a few days off my weekend job to give myself plenty of time to complete this, and after about a week of work, the site was done. It felt good to save her some money; when the project was all wrapped up, Kasasndra told me the new site costs her about $XYZ per year.",
+            "description": "I was speaking with my sister once upon a time, and somehow the topic came to money and expenses. I learned that she'd been paying over $200 per year for a site that was 4 years out of date and unfinished (her words, not mine)! I decided to strike a deal with her: I'd go stay in the spare room of her townhome for some time, and in exchange she'd get a new website that's a better value for her money. I took a few days off my weekend job to give myself plenty of time to complete this, and after about a week of work, the prototype of the site was done. Since then I've continued to build it out with more of her work as her portfolio continues to expand. I chose to keep the data stored in JSON files for simplicity; no need to spin up a backend for what's largely a static site. It felt good to save her some money; when the project was all wrapped up, Kasasndra told me the new site costs her about $XYZ per year.",
             "tools": [
                 {"img": "img/tech_logos/react.svg", "alt": "React.js"},
                 {"img": "img/tech_logos/react-router.svg", "alt": "React Router"},
