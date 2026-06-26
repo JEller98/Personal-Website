@@ -14,7 +14,7 @@
                 {
                     "href": "#",
                     "img": "img/other/home.svg",
-                    "alt": "An icon of a home.",
+                    "alt": "Home icon",
                     "title": "You're already here!",
                     "class": "invertible"
                 }
@@ -72,8 +72,8 @@
             "links": [
                 {
                     "href": "https://www.kassandraellerphotography.com/",
-                    "img": "",
-                    "alt": "",
+                    "img": "img/other/hyperlink.svg",
+                    "alt": "Hyperlink icon",
                     "title": "Take a look!",
                     "class": "invertible"
                 }
