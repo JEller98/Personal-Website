@@ -61,12 +61,12 @@
         "photo_site": {
             "title": "Photography Portfolio Site",
             "image": "img/project_imgs/modal_imgs/photosite.jpg",
-            "description": "I was speaking with my sister once upon a time, and somehow the topic came to money and expenses. I learned that she'd been paying over $200 per year for a site that was 4 years out of date and unfinished (her words, not mine)! I decided to strike a deal with her: I'd go stay in the spare room of her townhome for some time, and in exchange she'd get a new website that's a better value for her money. I took a few days off my weekend job to give myself plenty of time to complete this, and after about a week of work, the prototype of the site was done. Since then I've continued to build it out with more of her work as her portfolio expands. I chose to keep the data stored in JSON files for simplicity. It felt good to save her some money; when the project was all wrapped up, Kassandra told me the new site costs her about $200 less than the old one.",
+            "description": "I was speaking with my sister once upon a time, and somehow the topic came to money and expenses. I learned that she'd been paying close to $250 per year for a site that was 4 years out of date and unfinished (her words, not mine)! I decided to strike a deal with her: I'd go stay in the spare room of her townhome for some time, and in exchange she'd get a new website that's a better value for her money. After about a week of work, the prototype of the site was done. Since then I've continued to build it out with more of her work as her portfolio expands, along with some automated security features and a few test suites. I chose to keep the data stored in JSON files for simplicity. It felt good to save her some money; when the project was all wrapped up, Kassandra told me the new site costs her about $20 per year.",
             "tools": [
                 {"img": "img/tech_logos/react.svg", "alt": "React.js"},
                 {"img": "img/tech_logos/react-router.svg", "alt": "React Router"},
-                {"img": "img/tech_logos/vite.svg", "alt": "Vite"},
-                {"img": "img/tech_logos/css.svg", "alt": "CSS"},
+                {"img": "img/tech_logos/playwright.svg", "alt": "Playwright"},
+                {"img": "img/tech_logos/github-actions.svg", "alt": "GitHub Actions"},
                 {"img": "img/tech_logos/git.svg", "alt": "Git"}
             ],
             "links": [
@@ -88,6 +88,7 @@
                 {"img": "img/tech_logos/html.svg", "alt": "HTML"},
                 {"img": "img/tech_logos/css.svg", "alt": "CSS"},
                 {"img": "img/tech_logos/javascript.svg", "alt": "JavaScript"},
+                {"img": "img/tech_logos/chartjs.svg", "alt": "Chart.js"},
                 {"img": "img/tech_logos/git.svg", "alt": "Git"}
             ],
             "links": [
