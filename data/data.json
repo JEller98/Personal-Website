@@ -65,6 +65,7 @@
             "tools": [
                 {"img": "img/tech_logos/react.svg", "alt": "React.js"},
                 {"img": "img/tech_logos/react-router.svg", "alt": "React Router"},
+                {"img": "img/tech_logos/jestjs.svg", "alt": "Jest"},
                 {"img": "img/tech_logos/playwright.svg", "alt": "Playwright"},
                 {"img": "img/tech_logos/github-actions.svg", "alt": "GitHub Actions"},
                 {"img": "img/tech_logos/git.svg", "alt": "Git"}
